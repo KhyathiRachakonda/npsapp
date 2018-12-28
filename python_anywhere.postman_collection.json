@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "c4a9e81b-4590-4ac3-b77d-99be6b3e326c",
+		"name": "python_anywhere",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "student/addStudent/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"studentName\": \"raj\",\n        \"studentEmail\": \"raj@gmail.com\",\n        \"Age\": \"15\",\n        \"Grade\": \"11\",\n        \"School\": \"NPS\"\n    }"
+				},
+				"url": {
+					"raw": "http://npsevents.pythonanywhere.com/student/addStudent/",
+					"protocol": "http",
+					"host": [
+						"npsevents",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"student",
+						"addStudent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student/allStudents/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://npsevents.pythonanywhere.com/student/allStudents/",
+					"protocol": "http",
+					"host": [
+						"npsevents",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"student",
+						"allStudents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event/addEvent/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"eventName\": \"volleyball\",\n        \"eventDescription\": \"volleyball team game\",\n        \"eventOwner\": \"Babu\",\n        \"eventStartDate\": \"2019-01-17\",\n        \"eventEndDate\": \"2019-01-19\",\n        \"eventDifficulty\": \"Medium\",\n        \"score\":0\n    }"
+				},
+				"url": {
+					"raw": "http://npsevents.pythonanywhere.com/event/addEvent/",
+					"protocol": "http",
+					"host": [
+						"npsevents",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"event",
+						"addEvent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event/allEvents/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"eventName\": \"volleyball\",\n        \"eventDescription\": \"volleyball team game\",\n        \"eventOwner\": \"Babu\",\n        \"eventStartDate\": \"2019-01-17\",\n        \"eventEndDate\": \"2019-01-19\",\n        \"eventDifficulty\": \"Medium\",\n        \"score\":0\n    }"
+				},
+				"url": {
+					"raw": "http://npsevents.pythonanywhere.com/event/allEvents/",
+					"protocol": "http",
+					"host": [
+						"npsevents",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"event",
+						"allEvents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student/register/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"student\": 1,\n        \"event\":1\n    }"
+				},
+				"url": {
+					"raw": "http://npsevents.pythonanywhere.com/student/register/",
+					"protocol": "http",
+					"host": [
+						"npsevents",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"student",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student/register/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"student\": 1,\n        \"event\":1\n    }"
+				},
+				"url": {
+					"raw": "http://npsevents.pythonanywhere.com/student/register/",
+					"protocol": "http",
+					"host": [
+						"npsevents",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"student",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
