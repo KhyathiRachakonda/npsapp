@@ -1,94 +1,60 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-	<title>Student | Home</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+  <title>Student</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<style>
-	body{
-		background-color: rgb(8,112,165);
-		font-family: 'Thasadith', sans-serif;
-		color: white;
+
+<style>
+	h4{
+		margin-bottom: 0px;
 	}
-	.navbar{
-		background-color: rgb(0,75,114);
-	}
-	a, a:hover{
-		color: white;
-	}
-	.dropdown{
-		color:black;
-	}
-	.nav>li>a:hover{
-		background-color: rgb(49,66,77);
-	}
-	</style>
-	<script>	
-		function allEvents($scope,$http) {
-	        var url = "http://npsevents.pythonanywhere.com/event/allEvents/?format=json";
-            $http.get(url).then( function(response) {
-               $scope.allEventsData = response.data;
-            });
+</style>
+<script>
+	function register() {
 		}
-      </script>
-      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
-      </script>
-	<nav class="navbar navbar-expand-md navbar-fixed-top" id="navbar-colour">
-		<a class="navbar-brand">The Logo</a>
-		<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-			<span class="glyphicon glyphicon-menu-hamburger"></span>
-		</button>
-		<div class="collapse navbar-collapse navHeaderCollapse" id="collapse_target">
-			<ul class="nav navbar-nav">
-				<li><a href="student.html">Home</a></li>
-				<li><a href="studentMyEvent.html">My Events</a></li>
-				<li><a href="#progressReport">Progress Report</a></li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notifications</a>
-					<ul class="dropdown-menu">
-						<span class="dropdown-item-text">one</span>
-						<div role="separator" class="dropdown-divider">
-						</div>
-						<span class="dropdown-item-text">two</span>
-						<div role="separator" class="dropdown-divider">
-						</div>
-						<span class="dropdown-item-text">three</span>
-					</ul>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">My Profile</a></li>
-				<li><a href="login.html">Log Out</a></li>
-			</ul>
+</script>
+
+
+<div class="container">
+
+
+
+	<nav class="navbar-fixed-top container navbar navbar-light bg-info">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand">The Logo</a>
 		</div>
+		<ul class="nav navbar-nav">
+		  <li class="active"><a href="#home">Home</a></li>
+		  <li><a href="#allEvents">All Events</a></li>
+                          <li><a href="#myEvents">My Events</a></li>
+                          <li><a href="#progressReport">Progress Report</a></li>
+
+                           
+                           <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"       
+                           role="button" aria-haspopup="true" aria-expanded="false">Notifications</a>
+                           <div class="dropdown-menu">
+                                   <span class="dropdown-item-text">one</span>
+                                   <div role="separator" class="dropdown-divider"></div>
+                                   <span class="dropdown-item-text">two</span>
+                                   <div role="separator" class="dropdown-divider"></div>
+                                   <span class="dropdown-item-text">three</span>
+                           </div>
+
+
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">My Profile</a></li>
+			<li><a href="#">Log Out</a></li>
+		</ul>
+	  </div>
 	</nav>
-	<br><br><br>
-	<h1 class="text-center">All Events</h2>
-	<div class="container"  ng-app = "" ng-controller="allEvents">
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Event Name</th>
-					<th>Association Name</th>
-					<th>Event Date</th>
-					<th>Register</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="event in allEventsData">
-					<td>{{ event.eventName }}</td>
-					<td>{{ event.eventOwner }}</td>
-					<td>{{ event.eventStartDate }} <br> <small> {{ event.eventStartDay }} </small></td>
-					<td><button id="register" onclick="register()" class="btn btn-success">Register</button></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
 </body>
 </html>
